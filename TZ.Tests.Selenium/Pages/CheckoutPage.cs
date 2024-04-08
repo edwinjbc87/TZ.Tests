@@ -31,8 +31,12 @@ namespace TZ.Tests.Selenium.Pages
             get { return driver.FindElement(By.XPath("//div[@data-test='checkout-complete-container']")).Text; }
         }
 
+        public double ItemTotal
+        {
+            get { return Convert.ToDouble(driver.FindElement(By.XPath("//div[@data-test='subtotal-label']")).Text.Replace("Item total: $", "")); }
+        }
+
         public void Continue() => driver.FindElement(By.XPath("//input[@data-test='continue']")).Click();
         public void Finish() => driver.FindElement(By.XPath("//button[@data-test='finish']")).Click();
-
     }
 }

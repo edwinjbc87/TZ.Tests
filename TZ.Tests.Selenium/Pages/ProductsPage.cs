@@ -13,7 +13,12 @@ namespace TZ.Tests.Selenium.Pages
 
         public string SelectedProductSortStrategyName
         {
-            get { return driver.FindElement(By.XPath("//span[@data-test='active-option']")).Text; }
+            get { return driver.FindElement(By.XPath("//span[@data-test='active-option']")).GetAttribute("textContent"); }
+        }
+
+        public int ProductsQtyInCartIcon
+        {
+            get { return Convert.ToInt32(driver.FindElements(By.XPath("//span[@data-test='shopping-cart-badge']"))?.FirstOrDefault()?.Text ?? "0"); }
         }
 
         public void AddToCart(string productName)
@@ -29,20 +34,13 @@ namespace TZ.Tests.Selenium.Pages
             driver.FindElement(By.XPath($"//select[@data-test='product-sort-container']//option[text()='{orderName}']")).Click();
         }
 
-        public List<double> GetPricesList()
-        {
-            return driver.FindElements(By.XPath("//div[@data-test='inventory-item-price']")).Select(elem => Convert.ToDouble(elem.Text.Replace("$", ""))).ToList();
-        }
+        public List<double> GetPricesList() => driver.FindElements(By.XPath("//div[@data-test='inventory-item-price']")).Select(elem => Convert.ToDouble(elem.Text.Replace("$", ""))).ToList();
+        
 
         public IWebElement GetProductRemoveButton(string productName)
         {
             var removeFromCartDataTest = $"remove-{productName.ToLower().Replace(" ", "-")}";
             return driver.FindElements(By.XPath($"//button[@data-test='{removeFromCartDataTest}']"))?.FirstOrDefault();
-        }
-
-        public int ProductsQtyInCart
-        {
-            get { return Convert.ToInt32(driver.FindElements(By.XPath("//span[@data-test='shopping-cart-badge']"))?.FirstOrDefault()?.Text ?? "0"); }
         }
 
         public double GetAddedProductPrice(string productName)
