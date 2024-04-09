@@ -28,6 +28,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="app.js" />
     <Content Include="cypress\fixtures\cartdata.json" />
     <Content Include="cypress\fixtures\invalidcredentials.json" />
