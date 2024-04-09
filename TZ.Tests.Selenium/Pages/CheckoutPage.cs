@@ -8,7 +8,7 @@ using TZ.Tests.Selenium.Data;
 
 namespace TZ.Tests.Selenium.Pages
 {
-    public class CheckoutPage: BasePage
+    public class CheckoutPage: AuthorizedPage
     {
         public CheckoutPage(IWebDriver driver) : base(driver) { }
 

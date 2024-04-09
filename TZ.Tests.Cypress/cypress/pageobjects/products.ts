@@ -1,4 +1,6 @@
-class ProductsPage {
+import ProtectedPage from "./protectedpage"
+
+class ProductsPage extends ProtectedPage {
     elements = {
         selectedProductSortStrategyName: ()=> cy.get("span[data-test='active-option']"),
         productsQtyInCartIcon: ()=> cy.get("span[data-test='shopping-cart-badge']"),

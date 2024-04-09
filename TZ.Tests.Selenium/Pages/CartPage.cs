@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TZ.Tests.Selenium.Pages
 {
-    public class CartPage: BasePage
+    public class CartPage: AuthorizedPage
     {
         public CartPage(IWebDriver driver): base(driver) { }
 

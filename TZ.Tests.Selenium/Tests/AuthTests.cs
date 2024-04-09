@@ -51,10 +51,12 @@ namespace TZ.Tests.Selenium.Tests
         [Test(Description = "Logout")]
         public void WhenLogoutIsCalled_ShouldShowLoginForm()
         {
+            var productsPage = new ProductsPage(driver);
+
             loginPage.Login();
 
-            loginPage.OpenMenu();
-            loginPage.Logout();
+            productsPage.OpenMenu();
+            productsPage.Logout();
 
             loginPage.LoginButton.Should().NotBeNull();
         }

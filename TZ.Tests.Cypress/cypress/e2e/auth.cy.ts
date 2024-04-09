@@ -1,6 +1,7 @@
 import LoginPage from "../pageobjects/login";
+import ProductsPage from "../pageobjects/products";
 
-describe('Feature 1. Login Page', () => {
+describe('Feature 1. Auth Pages', () => {
   it('Case 1. Sucessful Login', () => {
     //Arrange
     const loginPage = new LoginPage();
@@ -31,5 +32,22 @@ describe('Feature 1. Login Page', () => {
       //Assert
       loginPage.elements.errorMessage().should('exist')
     });   
+  })
+
+  it('Case 3. Logout', () => {
+    //Arrange
+    const loginPage = new LoginPage();
+    const prodsPage = new ProductsPage();
+    
+    //Act
+    cy.fixture('validcredentials').then((creds) => {
+      loginPage.visit();
+      loginPage.login(creds.username, creds.password);
+    })
+    prodsPage.openMenu()
+    prodsPage.logout()
+    
+    //Assert
+    loginPage.elements.loginButton().should('exist')
   })
 })

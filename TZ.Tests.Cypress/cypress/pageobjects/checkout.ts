@@ -1,4 +1,6 @@
-class CheckoutPage {
+import ProtectedPage from "./protectedpage";
+
+class CheckoutPage extends ProtectedPage {
     elements = {
         firstNameInput: ()=> cy.get("input[data-test='firstName']"),
         lastNameInput: ()=> cy.get("input[data-test='lastName']"),

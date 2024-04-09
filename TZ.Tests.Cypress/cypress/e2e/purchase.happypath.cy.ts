@@ -4,7 +4,6 @@ import CartPage from "../pageobjects/cart"
 import CheckoutPage from "../pageobjects/checkout"
 import LoginPage from "../pageobjects/login"
 import ProductsPage from "../pageobjects/products"
-import Credential from "../types/Credential"
 import { faker } from '@faker-js/faker';
 
 const cartdata = require('../fixtures/cartdata.json')
@@ -17,7 +16,7 @@ describe('Feature 2. Cart', () => {
     cy.clearAllSessionStorage()
 
     const loginPage = new LoginPage();
-    cy.fixture('validcredentials').then((creds:Credential) => {
+    cy.fixture('validcredentials').then((creds) => {
       loginPage.visit();
       loginPage.login(creds.username, creds.password);
     });;

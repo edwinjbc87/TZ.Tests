@@ -15,8 +15,5 @@ namespace TZ.Tests.Selenium.Pages
         {
             this.driver = driver;
         }
-
-        public void Logout() => driver.FindElement(By.XPath("//a[@data-test='logout-sidebar-link']")).Click();
-        public void OpenMenu() => driver.FindElement(By.XPath("//img[@data-test='open-menu']/preceding-sibling::button")).Click();
     }
 }

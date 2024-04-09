@@ -1,4 +1,6 @@
-class CartPage {
+import ProtectedPage from "./protectedpage";
+
+class CartPage extends ProtectedPage {
     elements = {
         productsQtyInCartIcon: ()=> cy.get("span[data-test='shopping-cart-badge']").invoke('text').then((text) => parseInt(text)),
         productsQtyInCart: ()=> {

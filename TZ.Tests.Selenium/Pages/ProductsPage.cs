@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TZ.Tests.Selenium.Pages
 {
-    public class ProductsPage:BasePage
+    public class ProductsPage:AuthorizedPage
     {
         public ProductsPage(IWebDriver driver) : base(driver) { }
 
