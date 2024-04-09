@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TZ.Tests.Selenium", "TZ.Tests.Selenium\TZ.Tests.Selenium.csproj", "{A281635B-7650-438D-B7D2-C9000E8FB60A}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "TZ.Tests.Cypress", "TZ.Tests.Cypress\TZ.Tests.Cypress.njsproj", "{FDA96844-3C6A-46D3-A8D2-F79693316852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A281635B-7650-438D-B7D2-C9000E8FB60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A281635B-7650-438D-B7D2-C9000E8FB60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A281635B-7650-438D-B7D2-C9000E8FB60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDA96844-3C6A-46D3-A8D2-F79693316852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA96844-3C6A-46D3-A8D2-F79693316852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDA96844-3C6A-46D3-A8D2-F79693316852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA96844-3C6A-46D3-A8D2-F79693316852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

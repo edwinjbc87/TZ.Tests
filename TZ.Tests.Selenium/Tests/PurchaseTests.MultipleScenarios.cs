@@ -9,7 +9,7 @@ namespace TZ.Tests.Selenium.Tests
         public void WhenSortByPriceIsSelected_ShouldSortItemsByPrice()
         {
             // Arrange
-            var isSortedByPriceLowToHigh = true;
+            var isSortedByPriceLowToHigh = false;
 
 
             // Act
@@ -23,7 +23,7 @@ namespace TZ.Tests.Selenium.Tests
             isSortedByPriceLowToHigh.Should().BeTrue();
         }
 
-        [Test(Description = "Multiple Scenarios Workflow. Show remove button for added productss")]
+        [Test(Description = "Multiple Scenarios Workflow. Show remove button for added products")]
         public void WhenAddProductsToCart_ShouldShowRemoveButton()
         {
             loginPage.Login();
